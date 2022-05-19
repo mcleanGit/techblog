@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       'title',
       'post_text',
       'user_id'
-      ]
+      ],
     include: [
       {
         model: Comment,
