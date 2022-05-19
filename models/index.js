@@ -3,6 +3,12 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
+const { SequelizeScopeError } = require('sequelize/types');
+const UserPost = sequelize.define('user_post', {
+ role: Sequelize.STRING
+  }); 
+   User.belongsToMany(Post, { through: UserPost });
+   Post.belongsToMany(User, { through: UserPost });
 
 // create associations
 User.hasMany(Post, {
@@ -15,11 +21,15 @@ Post.belongsTo(User, {
 });
 
 User.belongsToMany(Post, {
+  through: UserPost,
+  as: belongsToMany('User, Post'),
   foreignKey: 'post_id',
   onDelete: 'SET NULL'
 });
 
 Post.belongsToMany(User, {
+ through: UserPost,
+ as: belongsToMany('Post, User'),
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
@@ -43,4 +53,4 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
-module.exports = { User, Post, Vote, Comment };
+module.exports = { User, Post, Comment };
