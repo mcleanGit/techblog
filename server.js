@@ -1,8 +1,9 @@
 // main server.js file: 
 const path = require('path');
 const express = require('express');
-const session = require('express-session');
 const exphbs = require('express-handlebars');
+require('dotenv');
+const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -22,7 +23,7 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars', exphbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
