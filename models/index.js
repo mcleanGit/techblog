@@ -3,7 +3,8 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
-const { SequelizeScopeError } = require('sequelize/types');
+
+// belongsToMany syntax uses special const UserPost
 const UserPost = sequelize.define('user_post', {
  role: Sequelize.STRING
   }); 
