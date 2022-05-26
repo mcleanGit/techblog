@@ -2,11 +2,11 @@
 
 # 14 Model View Controller (MVC): Tech Blog
 
-The intention of this effort was to build a CMS-style blog that would allow for posts and comments on coding development topics.
+The *intention* of this extensive effort was to build a CMS-style blog that would allow for posts and comments on coding development topics.
 
-Much of the site was constructed by modifying code from the related module, Just Tech New. Some elements of this transposition and modifcation work--often quite challenging at this stage of experience--were more successful than others. The core work was put in place, but failed to find a workable version--still more 'deplorable' than 'deployable'--in the time available.
+Much of the site was constructed by modifying code from the related module, Just Tech News. Some elements of this transposition and modifcation work--often quite challenging at this stage of my experience--were more successful than others. The core coding and refactoring was put in place, but failed to produce a workable version--still more 'deplorable' than 'deployable'--in the time available.
 
-As require, the structure of the app does follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+As required, the structure of the app *does* follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication purposes.
 
 The key elements expected of the app are outlined in the user story below. Although a good number of the code files and subfiles come close to fulfilling these requisites, the whole did not function or deploy. 
 
@@ -74,12 +74,16 @@ The app also installs dotenv, bcrypt, express-session, and connetct-session-sequ
 You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.
-As noted, althought the herokuapp was set up, it did not succesffuly deploy. (The logged errors remain too numerous to review, but npm start derails early with mysql password issues.) It is intended to be:
 
+As noted, although the herokuapp was set up, it did not succesffuly deploy. (The logged errors remain too numerous to review here, but an npm start derails early with mysql password issues.) The deploy was intended to be:
+https://hidden-thicket-07478.herokuapp.com/
+As note above, the build succeeded but the application failed to deploy.
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-The 
+The GitHub repo is found at:
+https://github.com/mcleanGit/techblog
+
 
 - - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reseatusrved.
