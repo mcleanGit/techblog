@@ -4,13 +4,13 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
-// belongsToMany syntax uses special const UserPost
+/* belongsToMany syntax uses special const UserPost
 const UserPost = sequelize.define('user_post', {
- role: Sequelize.STRING
-  }); 
-   User.belongsToMany(Post, { through: UserPost });
-   Post.belongsToMany(User, { through: UserPost });
-
+  role: Sequelize.STRING
+    }); 
+  User.belongsToMany(Post, { through: UserPost });
+  Post.belongsToMany(User, { through: UserPost });
+*/
 // create associations
 User.hasMany(Post, {
   foreignKey: 'user_id'
@@ -20,7 +20,7 @@ Post.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
-
+/*
 User.belongsToMany(Post, {
   through: UserPost,
   as: belongsToMany('User, Post'),
@@ -34,7 +34,7 @@ Post.belongsToMany(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
-
+*/
 Comment.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
