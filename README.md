@@ -75,7 +75,7 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.
 
-As noted, although the herokuapp was set up, it did not succesffuly deploy. (The logged errors remain too numerous to review here, but an npm start derails early with mysql password issues.) The deploy was intended to be:
+As noted, although the herokuapp was set up, it did not successfully deploy. (The logged errors remain too numerous to review here, but an npm start derails early with mysql password issues.) The deploy was intended to be:
 https://hidden-thicket-07478.herokuapp.com/
 As note above, the build succeeded but the application failed to deploy.
 
