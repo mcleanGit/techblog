@@ -1,0 +1,13 @@
+<!-- modifications from module, based on comments.handlebars -->
+<div class="posts">
+  {{#each this}}
+  <section class="post">
+    <div class="meta">
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{post_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
